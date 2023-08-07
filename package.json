@@ -1,0 +1,11 @@
+{
+  "name": "react-technical-challenge",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/backend",
+    "apps/frontend"
+  ],
+  "repository": "git@github.com:80-Lines/react-technical-challenge.git",
+  "license": "MIT"
+}

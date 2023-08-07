@@ -1,0 +1,34 @@
+{
+   "GET /api/products": {
+      "content-type": "api::product.product",
+      "populate": {
+         "category": {
+            "fields": [
+               "name",
+               "description",
+               "id"
+            ]
+         },
+         "image": {
+            "fields": [
+               "url",
+               "previewUrl",
+               "id"
+            ]
+         },
+         "color": {
+            "fields": [
+               "id",
+               "name"
+            ]
+         }
+      },
+      "fields": [
+         "name",
+         "description",
+         "price",
+         "color",
+         "id"
+      ]
+   }
+}

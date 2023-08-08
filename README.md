@@ -21,6 +21,7 @@ O desafio consiste em reproduzir uma página de produtos de um e-commerce, busca
 ## Instruções do backend
 
 - Para iniciar a aplicação rode `yarn dev` na pasta `apps/backend`
+- Para acessar o painel admin do Strapi acesse `http://localhost:1337/admin` com o usuário `80lines@80lines.com` e a senha `80LinesChallenge`
 - A API encontra-se no endereço `http://localhost:1337/api`
 - A documentação está em `http://localhost:1337/documentation`
 - Para entender mais sobre como funcionam os filtros e populações no Strapi acesso [aqui](https://docs.strapi.io/dev-docs/api/rest) a documentação oficial

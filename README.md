@@ -28,9 +28,9 @@ O desafio consiste em reproduzir uma página de produtos de um e-commerce, busca
 ## O que será avaliado?
 
 - Seguir e reproduzir com máxima fidelidade o protótipo apresentado nas instruções.
-- Totas as funcionalidades da aplicação (filtros, ordenação, pesquisa, etc)
+- Todas as funcionalidades da aplicação (filtros, ordenação, pesquisa, etc)
 - Gerenciamento de estados
-- Integraão com os dados da aplicação backend contida neste repositório (como o foco do teste é frontend, também poderá ser utilizadas outras fontes de dados. Desde que acessadar via API REST e com os mesmos dados apresentados no design)
+- Integração com os dados da aplicação backend contida neste repositório (como o foco do teste é frontend, também poderá ser utilizadas outras fontes de dados. Desde que acessadas via API REST e com os mesmos dados apresentados no design)
 - Procure não utilizar outras bibliotecas prontas além das que já existem no repositório
 - Responsividade (considere telas acima de 500px)
 - Padrão de commits (Conventional)

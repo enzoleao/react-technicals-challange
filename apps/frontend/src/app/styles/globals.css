@@ -16,12 +16,30 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+* {
+  margin: 0;
+  padding: 0;
+  padding: border-box;
+}
+body,
+input,
+textarea,
+button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  outline: none;
+}
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+ @media (max-width: 720px) {
+    html {
+      font-size: 87.5%;
+    }
+}
+.header-custom-gradient {
+  background: radial-gradient(121.38% 135.02% at 97.22% 93.69%, #9D59FF 0%, rgba(157, 89, 255, 0.00) 76.17%), #3A3C5A;  
 }

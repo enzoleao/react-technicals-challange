@@ -15,6 +15,9 @@ module.exports = {
       maxWidth: {
         'max-w-7xl': '82rem',
       },
+      colors: {
+        'gray-150': '#eee',
+      },
     },
   },
   plugins: [],

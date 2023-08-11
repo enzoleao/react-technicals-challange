@@ -1,1 +1,2 @@
-// Nesta pasta devem ser adicionadas as funções que farão a requisição ao backend
+export { getCategories } from './categoriesActions'
+export { getColors } from './colorsActions'

@@ -30,6 +30,9 @@ button {
   font-size: 1rem;
   outline: none;
 }
+body {
+  background-color: #EEE;
+}
 @media (max-width: 1080px) {
   html {
     font-size: 93.75%;
@@ -41,5 +44,4 @@ button {
     }
 }
 .header-custom-gradient {
-  background: radial-gradient(121.38% 135.02% at 97.22% 93.69%, #9D59FF 0%, rgba(157, 89, 255, 0.00) 76.17%), #3A3C5A;  
-}
+  background: radial-gradient(121.38% 135.02% at 97.22% 93.69%, #9D59FF 0%, rgba(157, 89, 255, 0.00) 76.17%), #3A3C5A;  }

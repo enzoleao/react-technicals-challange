@@ -1,1 +1,1 @@
-// Nesta pasta devem ser adicionados os componentes relacionados a filtros
+export { FiltersWrapper } from './FiltersWrapper'

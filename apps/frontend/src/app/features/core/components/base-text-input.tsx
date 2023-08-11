@@ -21,6 +21,7 @@ const BaseTextInput: React.ForwardRefRenderFunction<
     type="text"
     data-testid={testId}
     disabled={disabled}
+    onChange={onChange}
     className={classNameBuilder(
       commonClasses,
       !error && !disabled ? defaultClasses : '',

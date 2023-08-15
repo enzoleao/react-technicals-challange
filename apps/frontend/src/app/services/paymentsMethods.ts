@@ -1,0 +1,46 @@
+export const PaymentMethods = [
+  { id: 1, src: '/mc.svg', width: 48, height: 32, alt: 'mc-card' },
+  { id: 2, src: '/visa.svg', width: 48, height: 32, alt: 'visa-card' },
+  {
+    id: 3,
+    src: '/american-express.svg',
+    width: 48,
+    height: 32,
+    alt: 'american-express-card',
+  },
+  {
+    id: 4,
+    src: '/diners-club.svg',
+    width: 48,
+    height: 32,
+    alt: 'diners-club-card',
+  },
+  {
+    id: 5,
+    src: '/hipercard.svg',
+    width: 76,
+    height: 32,
+    alt: 'hipercard-card',
+  },
+  {
+    id: 6,
+    src: '/elo.svg',
+    width: 68,
+    height: 32,
+    alt: 'elo-card',
+  },
+  {
+    id: 7,
+    src: '/barcode.svg',
+    width: 68,
+    height: 32,
+    alt: 'barcode-card',
+  },
+  {
+    id: 8,
+    src: '/pix.svg',
+    width: 68,
+    height: 24,
+    alt: 'barcode-card',
+  },
+]

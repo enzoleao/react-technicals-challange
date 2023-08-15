@@ -15,7 +15,7 @@ interface MyContextProviderProps {
 }
 
 type ProductContextType = {
-  products: ProductType[] | null
+  products: ProductType[]
   setProducts: Dispatch<SetStateAction<ProductType[]>>
 }
 

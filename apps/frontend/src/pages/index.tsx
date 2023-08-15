@@ -1,10 +1,15 @@
+import Image from '@/features/core/components/image'
+import Divider from '@/features/core/components/divider'
 import { SearchInput } from '@/features/search/components'
 import { HomeIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
 import { ProductCard } from '@/features/products/components'
 import { useProductsContexts } from '@/contexts/productContext'
-import { FiltersWrapper } from '@/features/filters/components'
-import Image from '@/features/core/components/image'
-import Divider from '@/features/core/components/divider'
+import {
+  FiltersWrapper,
+  OrdenationSelectFilter,
+} from '@/features/filters/components'
+import { PaymentMethods } from '@/services/paymentsMethods'
+
 const Home: React.FC = () => {
   const { products } = useProductsContexts()
   return (
@@ -12,7 +17,6 @@ const Home: React.FC = () => {
       <main className="w-full flex flex-col items-center min-h-[1000px]">
         <section className="w-full flex flex-col items-center justify-center h-[164px] header-custom-gradient">
           <div className="w-full flex justify-between items-center max-w-[1310px] h-[85px]">
-            {/* <Image src={logo} alt="logo-image" /> */}
             <Image
               src="/logo.png"
               width={124}
@@ -33,8 +37,9 @@ const Home: React.FC = () => {
               </section>
               <section className="w-full flex items-center justify-between w-full text-[#585858]">
                 <p className="font-bold text-xl">Produtos mais buscados</p>
-                <span>
-                  <p>Produtos ordenados por:</p>
+                <span className="flex items-center gap-[16px]">
+                  <p>Produtos ordenados por: </p>
+                  <OrdenationSelectFilter />
                 </span>
               </section>
             </div>
@@ -44,18 +49,29 @@ const Home: React.FC = () => {
           <section className="w-full max-w-[280px]">
             <FiltersWrapper />
           </section>
-          <section className="w-full flex flex-wrap gap-x-[20.45px] gap-y-[20px] min-h-[1000px]">
-            {!!products &&
+          <section className="w-full h-full flex flex-wrap content-start gap-x-[20.45px] gap-y-[20px] min-h-[1000px]">
+            {!!products && products.length > 0 ? (
               products.map((i) => {
                 return (
                   <ProductCard
                     key={i.id}
                     src={i.image.url}
                     name={i.name}
-                    price={249.9}
+                    price={i.price}
                   />
                 )
-              })}
+              })
+            ) : (
+              <div className="w-full h-full min-h-[500px] flex items-center justify-center">
+                <Image
+                  isPublicImage={true}
+                  src="/not-found-bg.png"
+                  width={329}
+                  height={329}
+                  alt="not-found-image"
+                />
+              </div>
+            )}
           </section>
         </div>
         <footer className="w-full flex justify-center bg-white pb-[110px]">
@@ -77,64 +93,18 @@ const Home: React.FC = () => {
                 <div className="flex flex-col gap-[8px]">
                   <p className="h-[40px]">Formas de pagamento</p>
                   <span className="flex gap-[8px]">
-                    <Image
-                      src="/mc.svg"
-                      isPublicImage={true}
-                      width={48}
-                      height={32}
-                      alt="card"
-                    />
-                    <Image
-                      src="/visa.svg"
-                      isPublicImage={true}
-                      width={48}
-                      height={32}
-                      alt="card"
-                    />
-                    <Image
-                      src="/american-express.svg"
-                      isPublicImage={true}
-                      width={48}
-                      height={32}
-                      alt="card"
-                    />
-
-                    <Image
-                      src="/diners-club.svg"
-                      isPublicImage={true}
-                      width={48}
-                      height={32}
-                      alt="card"
-                    />
-
-                    <Image
-                      src="/hipercard.svg"
-                      isPublicImage={true}
-                      width={76}
-                      height={32}
-                      alt="card"
-                    />
-                    <Image
-                      src="/elo.svg"
-                      isPublicImage={true}
-                      width={68}
-                      height={32}
-                      alt="card"
-                    />
-                    <Image
-                      src="/barcode.svg"
-                      isPublicImage={true}
-                      width={68}
-                      height={32}
-                      alt="card"
-                    />
-                    <Image
-                      src="/pix.svg"
-                      isPublicImage={true}
-                      width={68}
-                      height={24}
-                      alt="card"
-                    />
+                    {PaymentMethods.map((i) => {
+                      return (
+                        <Image
+                          key={i.id}
+                          src={i.src}
+                          isPublicImage={true}
+                          width={i.width}
+                          height={i.height}
+                          alt={i.alt}
+                        />
+                      )
+                    })}
                   </span>
                 </div>
                 <Image
@@ -143,6 +113,7 @@ const Home: React.FC = () => {
                   width={194}
                   isPublicImage={true}
                   height={56}
+                  className="max-h-[56px]"
                 />
               </div>
             </section>

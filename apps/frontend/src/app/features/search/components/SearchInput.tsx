@@ -10,7 +10,7 @@ export const SearchInput = () => {
     setProducts(response)
   }
   return (
-    <div className="w-full max-w-[39.25rem]">
+    <div className="w-full max-w-[39.25rem] border border-[#9D59FF] h-[48px] rounded-lg">
       <TextInput
         id="search-input"
         placeholder="O que você está procurando?"

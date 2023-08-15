@@ -27,3 +27,8 @@ export type PriceSelectors = {
   startPrice: number
   finalPrice: number
 }
+export type FiltersStatesTypes = {
+  colors: number[]
+  categories: number[]
+  price: number[]
+}

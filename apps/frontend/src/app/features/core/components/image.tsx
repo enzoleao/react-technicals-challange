@@ -24,13 +24,13 @@ const Image = ({
   return (
     <NextImage
       alt={alt || ''}
+      priority={true}
       className={className}
       src={`${
         isPublicImage
           ? process.env.NEXT_PUBLIC_IMAGES_URL
           : process.env.NEXT_PUBLIC_API_URL
       }${src}`}
-      layout="fixed"
       width={width}
       height={height}
     />

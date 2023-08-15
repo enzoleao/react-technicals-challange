@@ -7,13 +7,14 @@ interface IProductCard {
 }
 export const ProductCard = (props: IProductCard) => {
   return (
-    <main className="w-full h-[319px] max-w-[235.91px] flex flex-col items-center justify-center gap-[30px] bg-white fill-white stroke-[#E0E0E0] rounded-md ">
-      <div className="min-h-[176px]">
+    <main className="w-full h-[319px] cursor-pointer max-w-[235.91px] flex flex-col items-center justify-center gap-[30px] bg-white fill-white stroke-[#E0E0E0] rounded-md ">
+      <div className="min-h-[177px]">
         <Image
           isPublicImage={false}
           src={props.src}
           width={184}
           height={177}
+          className="max-h-[177px]"
           alt="product-image"
         />
       </div>
